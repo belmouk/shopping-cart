@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router";
+import styles from "./Root.module.css";
 
 const Root = () => {
   return (
