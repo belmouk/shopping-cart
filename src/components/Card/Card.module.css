@@ -1,0 +1,38 @@
+.card {
+  width: 100%;
+  max-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 60px;
+}
+
+.productInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.productDescription {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  text-align: center;
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}

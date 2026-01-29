@@ -10,15 +10,17 @@ const Root = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="cart">Cart</Link>
+            <Link to="shop">Shop</Link>
           </li>
           <li>
-            <Link to="shop">Shop</Link>
+            <Link to="cart">Cart</Link>
           </li>
         </ul>
       </nav>
 
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 };
