@@ -3,6 +3,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: darkblue;
+  padding: 0.5rem;
 }
 
 ul {

@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.total {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}

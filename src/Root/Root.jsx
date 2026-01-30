@@ -1,9 +1,39 @@
 import { Outlet, Link } from "react-router";
 import styles from "./Root.module.css";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Root = () => {
   const [products, setProducts] = useState([]);
+
+  const handleChange = (id, value) => {
+    const nextProducts = products.map((item) => {
+      if (item.id === id) {
+        item.quantity = value >= 100 ? 100 : value;
+      }
+      return item;
+    });
+    setProducts(nextProducts);
+  };
+
+  const handleAddClick = (id) => {
+    const nextProducts = products.map((item) => {
+      if (item.id === id) {
+        item.isAdded = true;
+      }
+      return item;
+    });
+    setProducts(nextProducts);
+  };
+
+  const handleRemoveClick = (id) => {
+    const nextProducts = products.map((item) => {
+      if (item.id === id) {
+        item.isAdded = false;
+      }
+      return item;
+    });
+    setProducts(nextProducts);
+  };
 
   useEffect(() => {
     const controller = new AbortController();
@@ -54,7 +84,9 @@ const Root = () => {
       </nav>
 
       <main>
-        <Outlet context={[products, setProducts]} />
+        <Outlet
+          context={[products, handleChange, handleAddClick, handleRemoveClick]}
+        />
       </main>
     </>
   );

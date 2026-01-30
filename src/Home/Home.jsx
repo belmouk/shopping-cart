@@ -1,5 +1,10 @@
+import styles from "./Home.module.css";
 const Home = () => {
-  return <p>Welcome to Home page</p>;
+  return (
+    <section className={styles.content}>
+      <p>Welcome to the Shop</p>
+    </section>
+  );
 };
 
 export default Home;
