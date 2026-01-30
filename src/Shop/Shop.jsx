@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Card from "../components/Card/Card";
 import styles from "./Shop.module.css";
 import { useOutletContext } from "react-router-dom";

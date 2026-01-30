@@ -1,6 +1,3 @@
-import cartStyle from "./CardCart.module.css";
-import shopStyle from "./CardShop.module.css";
-
 const Card = ({ product, onChange, onAddClick, onRemoveClick, styles }) => {
   const handleInputChange = (e) => {
     onChange(product.id, e.target.value);
