@@ -6,33 +6,28 @@ function App() {
   const [products, setProducts] = useState([]);
 
   const handleChange = (id, value) => {
-    const nextProducts = products.map((item) => {
-      if (item.id === id) {
-        item.quantity = value >= 100 ? 100 : value;
-      }
-      return item;
+    const quantity = Math.min(100, Number(value));
+    setProducts((products) => {
+      return products.map((item) => {
+        return item.id === id ? { ...item, quantity } : item;
+      });
     });
-    setProducts(nextProducts);
   };
 
   const handleAddClick = (id) => {
-    const nextProducts = products.map((item) => {
-      if (item.id === id) {
-        item.isAdded = true;
-      }
-      return item;
+    setProducts((products) => {
+      return products.map((item) => {
+        return item.id === id ? { ...item, isAdded: true } : item;
+      });
     });
-    setProducts(nextProducts);
   };
 
   const handleRemoveClick = (id) => {
-    const nextProducts = products.map((item) => {
-      if (item.id === id) {
-        item.isAdded = false;
-      }
-      return item;
+    setProducts((products) => {
+      return products.map((item) => {
+        return item.id === id ? { ...item, isAdded: false } : item;
+      });
     });
-    setProducts(nextProducts);
   };
 
   useEffect(() => {
